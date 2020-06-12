@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Layout Grid</title>
+    <meta charset="utf-8">
+    <style>
+
+        * {
+            text-align: center;
+            font-size: xx-large;
+            line-height: 192px;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        #left {
+            grid-area: leftbar;
+        }
+
+        article {
+            grid-area: article;
+        }
+
+        article > h2 {
+            margin: 0px;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        #right {
+            grid-area: rightbar;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto;
+            max-width: 1200px;
+            min-width: 400px;
+            margin: auto;
+            grid-template-rows: 200px 200px 200px;
+            grid-template-areas:
+                "header header header header"
+                "leftbar article article rightbar"
+                "footer footer footer footer";
+        }
+
+        .container > * {
+            border: 4px solid black;
+            margin-top: 10px;
+            background-color: lightgrey;
+        }
+
+        article {
+            margin: 10px 10px 0px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>Header</header>
+
+        <div id="left">Left Sidebar</div>
+        <article><h2>Article</h2></article>
+        <div id="right">Right Sidebar</div>
+
+        <footer>Footer</footer>
+    </div>
+
+</body>
+</html>

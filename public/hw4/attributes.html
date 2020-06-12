@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Attributes</title>
+    <meta charset="utf-8">
+    <script>
+        function unhideHiddenClass() {
+            var list = document.getElementsByClassName('hidden');
+            for (i = 0; i < list.length; i++) {
+                list[i].hidden = false;
+            }
+        }
+
+        function toggleHidden(id) {
+            document.getElementById(id).hidden = !document.getElementById(id).hidden;
+        }
+
+        function editEvent() {
+            console.log("a");
+            document.getElementById("editedMessage").hidden = false;
+        }
+    </script>
+
+    <style>
+        * {
+            color: darkblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        *:focus {
+            outline: 0;
+        }
+
+        h1 {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            margin: -10px -10px 0px -10px;
+            text-align: center;
+        }
+
+        nav {
+            border: 2px dotted darkblue;
+            position: relative;
+            top: 10px;
+            width: 200px;
+        }
+
+        button {
+            background: white;
+            border: 2px slategrey solid;
+        }
+
+        button:hover {
+            background: slategrey;
+            color: white;
+            font-weight: bold;
+        }
+
+        p {
+            padding: 3px 10px;
+        }
+
+        p[contenteditable=true] {
+            border: 2px lightsteelblue dotted;
+        }
+
+        p[draggable=true] {
+            background-color: lightgrey;
+        }
+
+    </style>
+</head>
+<body onload="console.log('The page has finished loading');">
+    <h1>Attributes</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" accesskey="i" tabindex="2" data-content="main page" title="accesskey = i">Index.html</a></li>
+            <li><a href="text.html" accesskey="t" tabindex="1" data-content="text example" title="accesskey = t">Text.html</a></li>
+        </ul>
+    </nav>
+    <br>
+
+    <button id="unhide-btn" onclick="unhideHiddenClass();">Unhide text paragraphs</button>
+    <br>
+    <button onclick="toggleHidden('unhide-btn');">Toggle other button</button>
+
+    <p class="hidden" hidden contenteditable="true" oninput="editEvent()">You can edit this text and it will spellcheck for you!</p>
+    <p class="hidden" hidden contenteditable="true" spellcheck="false">You can edit this text, but it won't tell you spelling errors
+    </p>
+    <p class="hidden" hidden draggable="true">You can drag this text, but can't highlight.</p>
+    <p class="hidden" hidden dir="rtl" lang="ar" translate="no" title="This text is right to left">هذا النص من اليمين إلى اليسار</p>
+    <p class="hidden" hidden style="font-family:fantasy">This text is styled with css to have a different font.</p>
+
+    <p id="editedMessage" hidden>First paragraph has been edited</p>
+
+</body>
+</html>

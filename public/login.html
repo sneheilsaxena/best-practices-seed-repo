@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | XMas Crud</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.js"></script>
+    <noscript>
+      Please enable Javascript.
+    </noscript>
+</head>
+
+<body>
+    <header>
+      <h1>Login</h1>
+    </header>
+
+    <form action="javascript:submitLogin()">
+
+      <table>
+          <tr><td><label for="userName">Username:</label></td> <td><input type="text" name="userName" id="userName"></td></tr>
+          <tr><td><label for="password">Password:</label></td> <td><input type="password" name="password" id="password"></td></tr>
+      </table>
+
+      <button onclick="return checkForm();">Log in</button>
+    </form>
+
+    <p class="link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

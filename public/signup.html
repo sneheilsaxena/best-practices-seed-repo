@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up | XMas Crud</title>
+
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.js"></script>
+
+    <noscript>
+      Please enable Javascript.
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+
+    <form id="signupform" action="javascript:submitSignup()">
+      <table>
+        <tr><td><label for="userName">Username:</label></td><td><input type="text" name="userName" id="userName"></td></tr>
+        <tr><td><label for="email">Email:</label></td><td><input type="text" name="email" id="email"></td></tr>
+        <tr><td><label for="password">Password:</label></td><td><input type="password" name="password" id="password"></td></tr>
+        <tr><td><label for="password2">Re-enter password:</label></td><td><input type="password" name="password2" id="password2"></td></tr>
+      </table>
+      <button onclick="return checkForm();">Sign up</button>
+    </form>
+
+    <p class="link">Already have an account? <a href="login.html">Login</a></p>
+
+    <script src="signup.js"></script>
+
+</body>
+
+</html>

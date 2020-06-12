@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Sections</title>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: monospace;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            margin-top: 0px;
+        }
+
+        header, footer {
+            text-align: center;
+            position: relative;
+            top: 10px;
+            margin-bottom: 10px;
+        }
+
+        article {
+            position: relative;
+            top: 20px;
+            border: 2px solid grey;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            background-color: grey;
+            margin: 0px;
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+
+        nav {
+            background-color: lightgrey;
+        }
+
+        h3 {
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            margin-top: 5px;
+        }
+
+        section > section {
+            background-color: lightgrey;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sections</h1>
+
+    <header>
+        Header Content
+    </header>
+    <article>
+        <h2>Article Title</h2>
+
+        <section>
+            <h3>Section Title</h3>
+
+            <section>
+                <h4>Subsection Title</h4>
+                <p>Subsection Content</p>
+                <aside>
+                    <h5>Aside Title</h5>
+                    <h6>Aside content</h6>
+                </aside>
+                <p>More subsection Content</p>
+            </section>
+
+            <h3>Section 2 Title</h3>
+
+            <section>
+                <h4>Subsection Title</h4>
+                <p>Subsection Content</p>
+            </section>
+
+        </section>
+    </article>
+
+    <br>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="grouping.html">Grouping</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        Footer Content
+    </footer>
+</body>
+
+</html>

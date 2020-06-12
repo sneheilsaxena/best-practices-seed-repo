@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Embedded</title>
+    <meta charset="utf-8">
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: darkgreen;
+        }
+
+        div {
+            border: 2px dashed grey;
+            margin: 10px 0px;
+            padding: 0px 10px;
+            width: 470px;
+            margin: 20px 2px;
+            float: left;
+        }
+
+        h1 {
+            background: darkgreen;
+            color: white;
+            margin: -10px -10px 0px -10px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 5px;
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+        video {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Embedded</h1>
+
+    <div>
+        <h2>Images</h2>
+        <map name="imagemap">
+            <area shape="rect" coords="20,25,40,45" href="media/marble.jfif" alt="image map">
+        </map>
+        <picture>
+            <source srcset="media/image1.png" media="(min-width: 800px)">
+            <source srcset="media/image1-smaller.png" media="(min-width: 300px)">
+            <img alt="marbles" src="#" usemap="#imagemap">
+        </picture>
+        <iframe title="Iframe Title" width="400" height="275" src="media/image3.png"></iframe>
+    </div>
+
+    <div>
+        <h2>Videos</h2>
+        <embed type="video/mp4" src="media/video.mp4" width="300" height="250">
+        <br>
+        <video controls>
+            <source src="media/video.mp4" type="video/mp4">
+            <track default kind="captions" srclang="en" src="media/subtitles.vtt"/>
+            Video tag not supported
+        </video>
+    </div>
+
+    <div>
+        <h2>Other</h2>
+
+        <object data="media/pdfFile.pdf">
+            <param name="width" value="300">
+            <param name="height" value="500">
+        </object>
+
+        <br>
+
+        <audio controls>
+            <source src="media/audio.mp3" type="audio/mp3">
+            Audio tag not supported
+        </audio>
+    </div>
+
+</body>
+</html>

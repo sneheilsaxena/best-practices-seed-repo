@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Styled CRUD</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.js"></script>
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: darkblue;
+        }
+
+        *:focus {
+            outline: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        h1 {
+            background-color: darkblue;
+            color: white;
+            margin: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 15px;
+            padding-top: 20px;
+            max-width: 100%;
+        }
+
+        .movieTable {
+            font-size: 20px;
+            padding: 0px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 20px;
+            background-color: darkblue;
+        }
+
+        .movieTable td {
+            background-color: white;
+            padding: 5px;
+        }
+
+        .movieTable th {
+            background-color: lightblue;
+            color: darkblue;
+            padding: 10px;
+            min-width: 30px;
+        }
+
+        .delete, .edit {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .delete {
+            font-size: 38px;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .edit:hover, .delete:hover {
+            cursor: pointer;
+            background: lightblue;
+        }
+
+        .delete:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .edit:hover {
+            background-color: green;
+            color: white;
+        }
+
+        button {
+            margin-bottom: 10px;
+            color: white;
+            padding: 5px;
+            font-size: 20px;
+            background-color: darkblue;
+            border: darkblue 2px solid;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: lightblue;
+            color: darkblue;
+        }
+
+        dialog {
+            background-color: white;
+            border: darkblue solid 2px;
+            background-color: lightblue;
+            box-shadow: 5px 10px;
+            position: fixed;
+        }
+
+        dialog button {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        input, select, option {
+            margin: 5px;
+        }
+
+        label {
+            color: darkblue;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        input[type=number] {
+            width: 75px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Big Movie List</h1>
+
+    <script src="./styledcustomdialogs.js"></script>
+    <script src="./styledmovie.js"></script>
+</body>
+</html>

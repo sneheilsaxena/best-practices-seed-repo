@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Native Dialog</title>
+    <meta charset="utf-8">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.js"></script>
+
+</head>
+<body>
+
+    <h1>Simple Dialogs?</h1>
+    <button id="alertBtn">Alert</button>
+    <button id="confirmBtn">Confirm</button>
+    <button id="promptBtn">Prompt</button>
+    <button id="saferBtn">Safer Prompt</button>
+    <hr>
+
+    <output id="resultContent" style="border: 5px double black; visibility: hidden;"></output>
+
+    <script>
+        /**
+         * Hides the result content and sends the alert
+         */
+        function sendAlert() {
+            resultContent.style.visibility = "hidden";
+
+            setTimeout(() => {
+                alert("Alert pressed!");
+            }, 0);
+        }
+
+        /**
+         * Hides the result content and sends the confirm. Writes the result of the confirm into the output.
+         */
+        function sendConfirm() {
+            resultContent.style.visibility = "hidden";
+
+            setTimeout(() => {
+                resultContent.innerHTML = `Confirm result: ${confirm("Do you confirm this?")}`;
+                resultContent.style.visibility = "visible";
+            }, 0);
+        }
+
+        /**
+         * Hides the result content and sends the prompt. Writes the result of the prompt into the output.
+         */
+        function sendPrompt() {
+            resultContent.style.visibility = "hidden";
+
+            setTimeout(() => {
+                var result = prompt("What’s your name? ", "");
+                resultContent.innerHTML = `Prompt result: ${result === null || result == '' ? "User didn't input anything" : result}`;
+                resultContent.style.visibility = "visible";
+            }, 0);
+        }
+
+        /**
+         * Hides the result content and sends a prompt. Sanitizes the result of the prompt and writes it into the output.
+         */
+        function sendSafePrompt() {
+            resultContent.style.visibility = "hidden";
+
+            setTimeout(() => {
+                var result = DOMPurify.sanitize(prompt("What’s your name? ", ""));
+                resultContent.innerHTML = `Prompt result: ${result === null || result == '' ? "User didn't input anything" : result}`;
+                resultContent.style.visibility = "visible";
+            }, 0);
+        }
+
+        alertBtn.addEventListener("click", sendAlert);
+        confirmBtn.addEventListener("click", sendConfirm);
+        promptBtn.addEventListener("click", sendPrompt);
+        saferBtn.addEventListener("click", sendSafePrompt);
+    </script>
+</body>
+</html>

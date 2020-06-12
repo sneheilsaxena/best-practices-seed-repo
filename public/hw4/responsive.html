@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Responsive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        * {
+            align-items: center;
+            font-size: 1.25vw;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 3vw;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2vw;
+        }
+
+        main {
+            width: 100%;
+        }
+
+        main > * {
+            padding: 10px;
+            float: left;
+        }
+
+        #column1 {
+            width: 40%;
+        }
+
+        #column2, #column3 {
+            width: 30%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width:800px) {
+            #column1, #column2, #column3 {
+                width: 100%;
+            }
+            * {
+                font-size: 3vw;
+            }
+            h1 {
+                font-size: 5vw;
+            }
+            h2 {
+                font-size: 4vw;
+            }
+
+            a {
+                font-size: 3.5vw;
+                background-color: lightgray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Page</h1>
+    <main>
+        <div id="column1">
+            <h2>Column 1</h2>
+            <p>
+                Column 1 paragraph of content...
+            </p>
+            <picture>
+                <source srcset="media/responsive-image-smaller.png" media="(max-width: 350px)">
+                <source srcset="media/responsive-image.png">
+                <img alt="Sunset image" src="#">
+            </picture>
+            <p>
+                more paragraph content
+                as d kjas kdals dkj
+                als kdja lsknd liejoo ainwlknd
+                als kdja lsknd liejoo ainwlknd
+                als kdja lsknd liejoo ainwlknd
+                als kdja lsknd liejoo ainwlknd
+                als kdja lsknd liejoo ainwlknd
+                als kdja lsknd liejoo ainwlknd
+            </p>
+        </div>
+
+        <div id="column2">
+            <h2>Column 2</h2>
+            <p>
+                Column 2 paragraph of content
+                asjdhaksdjh alkdj alskjd las; dalskdj
+                lasjdas ;dishd iuh euhowieh
+                sdkasldkj lskjd alksj
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Col1</th>
+                        <th>Col2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row1.1</td>
+                        <td>Row1.2</td>
+                    </tr>
+                    <tr>
+                        <td>Row2.1</td>
+                        <td>Row2.2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="column3">
+            <h2>Column 3</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="css-wow.html">CSS Wow</a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+</body>
+</html>

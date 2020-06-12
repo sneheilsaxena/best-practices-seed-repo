@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Color background</title>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            background: url("media/page-background.png") repeat, radial-gradient(#344, #122) no-repeat fixed;
+            background-size: 400px, auto;
+        }
+
+        h1 {
+            color: white;
+            background-color: lightseagreen;
+            opacity: 0.7;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h2, p {
+            text-indent: 15px;
+        }
+
+        #confetti-box {
+            border: 5px dotted lightseagreen;
+            background-clip: padding-box;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: white;
+            background-image: url("media/background-pattern.png"), linear-gradient(to right, #FED, white);
+            background-size: 400px, auto;
+            color: green;
+            opacity: 0.9;
+        }
+
+        #confetti-box > h2 {
+            color: darkslateblue;
+        }
+
+        #sunset-box {
+            border-width: 5px;
+            border-style: solid;
+            border-color: darkred;
+            color: lightblue;
+            background: white url("media/background-image.png") content-box;
+            opacity: 0.9;
+        }
+
+        #sunset-box > h2 {
+            color: lightgoldenrodyellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Title of Page</h1>
+
+    <div id="sunset-box">
+        <h2>Subtitle</h2>
+        <p>Some content</p>
+        <h2>Subtitle 2</h2>
+        <p>Some content</p>
+    </div>
+
+    <br>
+
+    <div id="confetti-box">
+        <h2>Subtitle</h2>
+        <p>Some content</p>
+        <h2>Subtitle 2</h2>
+        <p>Some content</p>
+    </div>
+
+</body>
+</html>
