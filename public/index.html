@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login | XMas Crud</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Nova Flat" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.js"></script>
@@ -22,6 +21,8 @@
         </h1>
     </header>
 
+    <div id="header_padding"></div>
+
     <nav class="topnav">
         <a href="#home">About</a>
         <a href="#news">Academics</a>
@@ -30,9 +31,10 @@
         <a href="#about">Campus Life</a>
     </nav>
 
+    <img loading="lazy" id="ucsd_wide" src="images/ucsd_wide.jpg" alt="UCSD wide shot" width=100%>
 
-    <form action="javascript:submitLogin()">
 
+    <form>
         <table>
             <tr>
                 <td><label for="userName">Username:</label></td>
@@ -44,12 +46,13 @@
             </tr>
         </table>
 
-        <button onclick="return checkForm();">Log in</button>
+        <button>Log in</button>
     </form>
 
     <p class="link">Don't have an account? <a href="signup.html">Sign Up</a></p>
 
-    <script src="login.js"></script>
+    <!--
+    <script src="login.js"></script>-->
     <!--
     <script src="./customdialog.js "></script>
     <script src="./xmaslist.js "></script>-->
