@@ -78,7 +78,7 @@ header h1 {
 }
 
 #header_wrapper {
-    margin-left: 4em;
+    margin-left: 5em;
 }
 
 
@@ -100,9 +100,9 @@ header h1 {
 .topnav a {
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px 16px 16px;
+    padding: 57px 57px 57px 57px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 29px;
 }
 
 
